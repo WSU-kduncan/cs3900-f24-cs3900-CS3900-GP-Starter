@@ -23,8 +23,11 @@ Project Name: Animal Shelter Pro
 > Create a simple user flow diagram to illustrate how users will navigate through MVP.
 
 Log in page - "staff gets confused on their tasks for the day. no way of knowing who is handling specific adoptions"  
+
 search bar - "finding information was a bit troublesome, it would be nice to just hit key words and find what I need."  
+
 app to show pets - "i dont know what animals are at the shelter. i just know they are a shelter."  
+
 add/remove pets - "two people were adopting same pet and it wasnt known to both adopters, caused a bit of a problem. and one time someone adopted a pet when it was already adopted months ago."  
 
 
