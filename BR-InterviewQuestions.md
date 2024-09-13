@@ -19,3 +19,9 @@ How many staff members do you have?
 What are you hoping this app will help you with?
 
 What about other management tools do you have trouble with?
+
+How many applications do you get per month?
+
+What happens after an applicant gets approved?
+
+How is Inventory tracked?
