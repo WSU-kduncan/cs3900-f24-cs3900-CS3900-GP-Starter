@@ -12,10 +12,10 @@ Managing the various difficulties of running a pet shelter.
 
 ## Vision and Objectives
 
-> Briefly describe the overall vision for your product.
+> Briefly describe the overall vision for your product.  
   > The user is able to easily look over adoption applications. The user can keep track of inventory, pet needs, and customer satisfaction.  
 
-> Outline the key objectives of the MVP.
+> Outline the key objectives of the MVP.  
   > Sort through adoption applications and change their status
   > Keep track of inventory
   > Store potential adopter info in an easily searchable database
