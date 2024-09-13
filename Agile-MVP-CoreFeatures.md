@@ -1,20 +1,26 @@
 # MVP \- Define Core Features
 
-Team Name:  
-Team Members:  
-Project Name:
+Team Name:  AnimalShelter  
+Team Members: Ava McIntosh, Hunter McIntosh, Cara Zozokos, Gani Sagiev  
+Project Name: Animal Shelter Pro
 
 ## Key Features
 
 > List the essential features that will be included in MVP.  
 
-Your text starts here
+- Log in page for staff (staff ID, and password)
+- website with description, pictures, names, and breed of pet.
+- search bar
+- Visual representation of databases (example: inventory, pets)
+- large simple buttons
+- 
 
 ***
 
 ## User Flow
 
 > Create a simple user flow diagram to illustrate how users will navigate through MVP.
+
 
  ***
 
