@@ -42,12 +42,23 @@ add/remove pets - "two people were adopting same pet and it wasnt known to both 
 > Identify potential risks associated with MVP development and launch.
 
   \> Data gets entered wrong  
-  \> Required fields showing up empty  
+  
+  \> Required fields showing up empty 
+  
   \> Scheduling conflicts during development and launch  
+  
   \> People falling behind on merges/merge conflicts  
 
 
 > Suggest strategies for mitigating these risks.
+
+  \>Set up individual due dates
+
+  \>Clear communication
+
+  \> Verification window before submission
+
+  \> Not allowing null variables in required fields
 
 *** 
 
