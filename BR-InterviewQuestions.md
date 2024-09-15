@@ -25,3 +25,9 @@ How many applications do you get per month?
 What happens after an applicant gets approved?
 
 How is Inventory tracked?
+
+What features would make managing your shelter easier?
+
+How do you currently communicate with potential adopters?
+
+What challenges do you face with keeping pet information up-to-date? 
