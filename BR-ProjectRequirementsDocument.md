@@ -37,7 +37,7 @@ The shelter has access to devices like computers, tablets, or smartphones.
 ***
 
 ### Performance
-
+The app should handle up to 100 users at once without lag. Actions like searching for pets or processing applications shoult take less than 2 seconds.
 ***
 
 ### Open Questions
