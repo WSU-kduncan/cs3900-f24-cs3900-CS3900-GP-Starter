@@ -28,6 +28,8 @@ Project Name: Animal Shelter Pro
 ## User Flow
 
 > Create a simple user flow diagram to illustrate how users will navigate through MVP
+![CS3900 flowchart](https://github.com/user-attachments/assets/50dd9bba-5e76-43ca-89a6-868efd43b0af)
+
 
 **Staff Members:**
 
