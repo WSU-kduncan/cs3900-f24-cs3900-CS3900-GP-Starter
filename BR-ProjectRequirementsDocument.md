@@ -29,9 +29,17 @@ The shelter has access to devices like computers, tablets, or smartphones.
 ***
 
 ### Requirements
-**Essential Features:** User login, pet listings, adoption management, inventory tracking, notifications.
+**Essential Features:** 
+- User login
+- pet listings
+- adoption management
+- inventory tracking
+- notifications.
 
-**Additional Requirements:** Easy navigation, secure data handling, mobile compatibility.
+**Additional Requirements:** 
+- Easy navigation 
+- secure data handling
+-  mobile compatibility
 
 ***
 
