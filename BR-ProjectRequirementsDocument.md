@@ -67,4 +67,10 @@ The app should handle up to 100 users at once without lag. Actions like searchin
 
 ### Open Questions
 
+What tasks at the shelter are most time-consuming for your team?
+
+How do you keep track of which pets have been adopted or are available?
+
+What would you like the app to help you do better or faster?
+
 ***
