@@ -37,9 +37,9 @@ The shelter has access to devices like computers, tablets, or smartphones.
 
 ### Scope
   The Scope of this project includes
-  -Database creation using MariaDB
-  -Frontend development using angular
-  -backend development using JAVA to connect the frontend to the database
+  - Database creation using MariaDB
+  - Frontend development using angular
+  - Backend development using JAVA to connect the frontend to the database
 
   The scope does not include 
   - Letting processing adopters adoption papers
