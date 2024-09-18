@@ -10,7 +10,7 @@ services:
       # - ./data:/var/lib/mysql                   # Mount a volume for data persistence (optional)
     environment:
       - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=work_order_pro
+      - MYSQL_DATABASE=shelter
       - MYSQL_USER=user
       - MYSQL_PASSWORD=password
     ports:
