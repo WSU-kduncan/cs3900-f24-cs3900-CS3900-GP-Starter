@@ -23,7 +23,7 @@ COMMENT 'Pet'
 
 --Adopters
 --
-DROP  TABLE IF EXISTS helter.adopter;
+DROP  TABLE IF EXISTS shelter.adopter;
 
 --CREATE Table
 CREATE TABLE adopter
