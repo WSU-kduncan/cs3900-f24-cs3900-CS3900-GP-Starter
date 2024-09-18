@@ -14,8 +14,8 @@ CREATE TABLE pets
 	,species        VARCHAR(15)     NOT NULL			COMMENT 'species of the animal'
 	,breed          VARCHAR(25)     NOT NULL 			COMMENT 'Breed of the animal'
 	,age            SMALLINT        NOT NULL 			COMMENT 'animals age in terms of years'
-	,status         VARCHAR(15)     DEFAULT 'Not Adopted' CONSTRAINT chk_pet_status CHECK (Status in ('Not Adopted', 'Adopted')) 	COMMENT 'Animals adoptions status'
-
+	,status         VARCHAR(15)     DEFAULT 'Not Adopted' 		COMMENT 'Animals adoption status' 
+	,CONSTRAINT chk_pet_status CHECK (Status in ('Not Adopted', 'Adopted')) 
 	,PRIMARY KEY (pet_ID) 						COMMENT 'Pet identification number that is the primary key'
 )
 COMMENT 'Pets'
@@ -69,7 +69,8 @@ CREATE TABLE adoption_applications
 	,adopter_ID           	INT     	NOT NULL					COMMENT 'Adopter ID Number'
 	,staff_ID             	INT     	NOT NULL					COMMENT 'Staff ID Number'
 	,date                 	DATETIME 							COMMENT 'Date of Application'
-	,status               	VARCHAR(15) 	DEFAULT 'Pending' CONSTRAINT chk_application_status CHECK (Status in ('Pending', 'Approved', 'Rejected'))	COMMENT 'Status of Application'
+	,status               	VARCHAR(15) 	DEFAULT 'Pending' 				COMMENT 'Status of Application'
+	,CONSTRAINT chk_application_status CHECK (Status in ('Pending', 'Approved', 'Rejected'))
 
 	,PRIMARY KEY (application_ID)								COMMENT 'the ID number of the application is the primary key'
 )
