@@ -14,7 +14,7 @@ CREATE TABLE pets
 	,species        VARCHAR(15)     NOT NULL			COMMENT 'species of the animal'
 	,breed          VARCHAR(25)     NOT NULL 			COMMENT 'Breed of the animal'
 	,age            SMALLINT        NOT NULL 			COMMENT 'animals age in terms of years'
-	,status         VARCHAR(15)     DEFAULT 'Not Adopted' CONSTRAINT chk_pet_status CHECK (status IN ('Not Adopted', 'Adopted')) 	COMMENT 'Animals adoptions status'
+	,status         VARCHAR(15)     DEFAULT 'Not Adopted' CONSTRAINT chk_pet_status CHECK (Status in ('Not Adopted', 'Adopted')) 	COMMENT 'Animals adoptions status'
 
 	,PRIMARY KEY (pet_ID) 						COMMENT 'Pet identification number that is the primary key'
 )
