@@ -4,10 +4,10 @@ USE shelter;
 
 --Pets
 --
-DROP TABLE IF EXISTS shelter.pets;
+DROP TABLE IF EXISTS shelter.pet;
 
 --Create Table
-CREATE TABLE pets
+CREATE TABLE pet
 (
 	 pet_ID		INT		NOT NULL	AUTO_INCREMENT	COMMENT 'identifying number for pet' 
 	,name		VARCHAR(35)     NOT NULL 			COMMENT 'name of the pet'
@@ -18,15 +18,15 @@ CREATE TABLE pets
 	,CONSTRAINT chk_pet_status CHECK (Status in ('Not Adopted', 'Adopted')) 
 	,PRIMARY KEY (pet_ID) 						COMMENT 'Pet identification number that is the primary key'
 )
-COMMENT 'Pets'
+COMMENT 'Pet'
 ;
 
 --Adopters
 --
-DROP  TABLE IF EXISTS shelter.adopter;
+DROP  TABLE IF EXISTS helter.adopter;
 
 --CREATE Table
-CREATE TABLE adopters
+CREATE TABLE adopter
 (
 	 adopter_ID	INT             NOT NULL	AUTO_INCREMENT 	COMMENT 'adopter identification number'
 	,first_name     VARCHAR(35)     NOT NULL 			COMMENT 'the first name of the adopter'
@@ -36,7 +36,7 @@ CREATE TABLE adopters
 
 	,PRIMARY KEY (adopter_ID)					COMMENT 'the ID number of adopters is the primary key'
 )
-COMMENT 'Adopters'
+COMMENT 'Adopter'
 ;
 
 --Staff
@@ -62,7 +62,7 @@ COMMENT 'Staff'
 DROP TABLE IF EXISTS shelter.adoption_application;
 
 --CREATE Table
-CREATE TABLE adoption_applications
+CREATE TABLE adoption_application
 (
 	 application_ID		INT     	NOT NULL	IDENTITY	AUTO_INCREMENT	COMMENT 'Application ID Number'
 	,pet_ID               	INT     	NOT NULL					COMMENT 'Pet ID Number'
@@ -77,22 +77,22 @@ CREATE TABLE adoption_applications
 COMMENT 'Adoption Application'
 ;
 
-ALTER TABLE adoption_applications
-	ADD CONSTRAINT	adoption_applications_pet_fk	COMMENT 'Constraint for adoption_applications table'
+ALTER TABLE adoption_application
+	ADD CONSTRAINT	adoption_application_pet_fk	COMMENT 'Constraint for adoption_applications table'
 	FOREIGN KEY	(pet_ID)			COMMENT 'pet_ID foreign key in adoptions_application'
-	REFERENCES      pets (pet_ID) 			COMMENT 'reference to pets table primary key'
+	REFERENCES      pet (pet_ID) 			COMMENT 'reference to pets table primary key'
 	ON DELETE RESTRICT
 	ON UPDATE RESTRICT;
 
-ALTER TABLE adoption_applications
-	ADD CONSTRAINT	adoption_applications_adopter_fk	COMMENT 'Constraint for adoption_applications table'
+ALTER TABLE adoption_application
+	ADD CONSTRAINT	adoption_application_adopter_fk	COMMENT 'Constraint for adoption_applications table'
 	FOREIGN KEY     (adopter_ID)				COMMENT 'adopter_ID foreign key in adoption_applications table'
-	REFERENCES      adopters (adopter_ID)			COMMENT 'reference to adopters table primary key'
+	REFERENCES      adopter (adopter_ID)			COMMENT 'reference to adopters table primary key'
 	ON DELETE RESTRICT
 	ON UPDATE RESTRICT;
 
-ALTER TABLE adoption_applications
-	ADD CONSTRAINT	adoption_applications_staff_fk	COMMENT 'Constraint for adoption_applications table'
+ALTER TABLE adoption_application
+	ADD CONSTRAINT	adoption_application_staff_fk	COMMENT 'Constraint for adoption_applications table'
 	FOREIGN KEY     (staff_ID)			COMMENT 'staff_ID foreign key in adoption_applications'
 	REFERENCES      staff (staff_ID)		COMMENT 'reference to staff table primary key'
 	ON DELETE RESTRICT
@@ -103,7 +103,7 @@ ALTER TABLE adoption_applications
 DROP TABLE IF EXISTS shelter.inventory;
 
 --Create Table
-CREATE TABLE Inventory
+CREATE TABLE inventory
 (
 	 item_ID        INT		IDENTITY	AUTO_INCREMENT	COMMENT 'Item ID Number'
 	,quantity       SMALLINT	 	 			COMMENT 'Quantity of Items'
