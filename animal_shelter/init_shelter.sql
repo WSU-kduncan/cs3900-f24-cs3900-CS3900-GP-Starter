@@ -68,7 +68,7 @@ CREATE TABLE adoption_application
 	,pet_ID               	INT     	NOT NULL					COMMENT 'Pet ID Number'
 	,adopter_ID           	INT     	NOT NULL					COMMENT 'Adopter ID Number'
 	,staff_ID             	INT     	NOT NULL					COMMENT 'Staff ID Number'
-	,application_date                 	DATETIME 							COMMENT 'Date of Application'
+	,application_date                 	DATE 							COMMENT 'Date of Application'
 	,application_status               	VARCHAR(15) 	DEFAULT 'Pending' 				COMMENT 'Status of Application'
 	,CONSTRAINT chk_application_status CHECK (application_status in ('Pending', 'Approved', 'Rejected'))
 
@@ -109,7 +109,7 @@ CREATE TABLE inventory
 	,quantity       SMALLINT	 	 			COMMENT 'Quantity of Items'
 	,locations      VARCHAR(50) 	 	 			COMMENT 'Location of Item'			
 	,cost           DECIMAL(5,2)	 	 			COMMENT 'Cost of Item'
-	,expiration     DATETIME	 	 			COMMENT 'Expiration Date of Item'
+	,expiration     DATE	 	 			COMMENT 'Expiration Date of Item'
 	,staff_ID	INT		NOT NULL	 		COMMENT 'Staff ID Number'
 	,PRIMARY KEY (item_ID)
 )
