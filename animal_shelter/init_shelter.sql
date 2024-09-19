@@ -68,7 +68,7 @@ CREATE TABLE adoption_application
 	,pet_ID               	INT     	NOT NULL					COMMENT 'Pet ID Number'
 	,adopter_ID           	INT     	NOT NULL					COMMENT 'Adopter ID Number'
 	,staff_ID             	INT     	NOT NULL					COMMENT 'Staff ID Number'
-	,date                 	DATETIME 							COMMENT 'Date of Application'
+	,application_date                 	DATETIME 							COMMENT 'Date of Application'
 	,application_status               	VARCHAR(15) 	DEFAULT 'Pending' 				COMMENT 'Status of Application'
 	,CONSTRAINT chk_application_status CHECK (application_status in ('Pending', 'Approved', 'Rejected'))
 
