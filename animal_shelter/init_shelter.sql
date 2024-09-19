@@ -62,19 +62,21 @@ COMMENT 'Staff'
 DROP TABLE IF EXISTS shelter.adoption_application;
 
 --CREATE Table
+-- CREATE Table
 CREATE TABLE adoption_application
 (
-	 application_ID		INT     	NOT NULL	IDENTITY	AUTO_INCREMENT	COMMENT 'Application ID Number'
-	,pet_ID               	INT     	NOT NULL					COMMENT 'Pet ID Number'
-	,adopter_ID           	INT     	NOT NULL					COMMENT 'Adopter ID Number'
-	,staff_ID             	INT     	NOT NULL					COMMENT 'Staff ID Number'
-	,application_date                 	DATE 							COMMENT 'Date of Application'
-	,application_status               	VARCHAR(15) 	DEFAULT 'Pending' 				COMMENT 'Status of Application'
+	  -- 
+	 application_id	INT             NOT NULL	AUTO_INCREMENT 	--  'adopter identification number'
+	,pet_ID               	INT     	NOT NULL					--  'Pet ID Number'
+	,adopter_ID           	INT     	NOT NULL					--  'Adopter ID Number'
+	,staff_ID             	INT     	NOT NULL					--  'Staff ID Number'
+	,application_date                 	DATE 							--  'Date of Application'
+	,application_status               	VARCHAR(15) 	DEFAULT 'Pending' 				--  'Status of Application'
 	,CONSTRAINT chk_application_status CHECK (application_status in ('Pending', 'Approved', 'Rejected'))
 
-	,PRIMARY KEY (application_ID)								COMMENT 'the ID number of the application is the primary key'
+	,PRIMARY KEY (application_ID)								--  'the ID number of the application is the primary key'
 )
-COMMENT 'Adoption Application'
+--  'Adoption Application'
 ;
 
 ALTER TABLE adoption_application
