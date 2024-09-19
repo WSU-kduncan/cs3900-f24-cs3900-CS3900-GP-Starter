@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS shelter.pet;
 CREATE TABLE pet
 (
 	 pet_ID		INT		NOT NULL	AUTO_INCREMENT	COMMENT 'identifying number for pet' 
-	,name		VARCHAR(35)     NOT NULL 			COMMENT 'name of the pet'
+	,pet_name		VARCHAR(35)     NOT NULL 			COMMENT 'name of the pet'
 	,species        VARCHAR(15)     NOT NULL			COMMENT 'species of the animal'
 	,breed          VARCHAR(25)     NOT NULL 			COMMENT 'Breed of the animal'
 	,age            SMALLINT        NOT NULL 			COMMENT 'animals age in terms of years'
