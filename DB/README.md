@@ -1,1 +1,4 @@
-
+- `README.md` contains on how to ( / 2)
+    - start the DB container
+    - connect to the database / validate the database configuration
+    - description of each SQL query scripts in `SQL-Toolbox`
