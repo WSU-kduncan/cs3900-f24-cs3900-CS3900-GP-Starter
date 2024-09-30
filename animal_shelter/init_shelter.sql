@@ -105,17 +105,18 @@ ALTER TABLE adoption_application
 DROP TABLE IF EXISTS shelter.inventory;
 
 --Create Table
+-- Create Table
 CREATE TABLE inventory
 (
-	 item_ID        INT		IDENTITY	AUTO_INCREMENT	COMMENT 'Item ID Number'
-	,quantity       SMALLINT	 	 			COMMENT 'Quantity of Items'
-	,locations      VARCHAR(50) 	 	 			COMMENT 'Location of Item'			
-	,cost           DECIMAL(5,2)	 	 			COMMENT 'Cost of Item'
-	,expiration     DATE	 	 			COMMENT 'Expiration Date of Item'
-	,staff_ID	INT		NOT NULL	 		COMMENT 'Staff ID Number'
-	,PRIMARY KEY (item_ID)
+item_id	INT             NOT NULL	AUTO_INCREMENT 	--  'adopter identification number'
+	,quantity       SMALLINT	 	 			--  'Quantity of Items'
+	,locations      VARCHAR(50) 	 	 			--  'Location of Item'			
+	,cost           DECIMAL(5,2)	 	 			--  'Cost of Item'
+	,expiration     DATE	 	 			--  'Expiration Date of Item'
+	,staff_ID	INT		NOT NULL	 		--  'Staff ID Number'
+	,PRIMARY KEY (item_id)
 )
-COMMENT 'Inventory'
+--  'Inventory'
 ;
 
 ALTER TABLE inventory
