@@ -6,7 +6,8 @@
 
 ![image](https://github.com/user-attachments/assets/aa47ade2-d155-4ad6-8c0e-d63cdd1416e0)
 
-https://github.com/WSU-kduncan/dbdesign-assignments-Ardalan81-1/blob/main/Assignments/DB-Assignment-1.md
+![image](https://github.com/user-attachments/assets/1148257e-51b2-45d5-8955-35579d6836e1)
+
 
 **Description:**
 
