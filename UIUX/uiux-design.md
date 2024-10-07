@@ -4,6 +4,21 @@
 
 ## Search
 ![Flowchart (1)](https://github.com/user-attachments/assets/71566262-dd59-48f7-9265-777234ae60c7)
+1.) The Application opens on a Log in screen
+
+2.)User Logs in
+
+3.) opens to the pets page as the home page
+
+4.) User selects the desired page from the lefthand menu
+
+5.) User navigates and clicks on the search bar
+
+6.) User types in the desired search parameter
+
+7.) All entries with the search parameter appears 
+
+8.) User Selects desired entry and performs whatever it is they needed the info with
 
 
 ## Create
