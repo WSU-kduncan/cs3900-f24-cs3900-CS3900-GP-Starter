@@ -11,6 +11,20 @@
 ## Update
   ![Update User Flow](https://github.com/user-attachments/assets/0d1f1209-551a-4080-8b6b-d62b81b0d547)
 
+  1. ) The application opens up with a sign in page.
+    
+  3. ) The user logs in
+
+  5. ) Opens up with the pets page as the main page
+     
+  7. ) The user can choose between tabs: Pets, Application, Inventory and Staff
+     
+  9. ) If they choose Pets they can click on the Pets name and a pop up with the animals info pops up. They can click the edit button on the bottom. The fields will be able to be changed. The user will then hit Update and a confirmation box will pop up. If they hit yes edits will be saved. If they hit no nothing will be changed.
+      
+  11. ) If they choose Applications or Staff its the same process as pets.
+      
+  13. ) If they choose Inventory it can be changed by hitting the Edit button on the bottom on the Inventory page. Edit the fields they would like to change. Asks for confirmation and if they hit yes changes will be saved. 
+
 
 ## Delete
 ![delete page flow](images/delete-user-flow.png)  
