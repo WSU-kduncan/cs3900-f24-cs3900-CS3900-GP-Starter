@@ -1,7 +1,17 @@
 # User Flows
 ## Landing/Main application
-![main page flow](path_to_image)  
+![main page flow](./images/home-page-flow.png) 
+**1.) User starts on Log In page.**
 
+**2.) User inputs credentials, Staff ID and password**
+
+**3.) User clicks enter or log in button**
+
+**4.) The credentials are checked for access**
+
+**4a.) If credentials INVALID, error message is displayed to User, prompting to try again**
+
+**4b.) If credentials VALID, the User is brought to main page** 
 ## Search
 ![Flowchart (1)](https://github.com/user-attachments/assets/71566262-dd59-48f7-9265-777234ae60c7)
 1.) The Application opens on a Log in screen
@@ -119,7 +129,7 @@
 ![applications frame](images/applications-wireframe.png)  
 
 ## Inventory 
-![inventory frame](path_to_image)  
+![inventory frame](./images/inventory-wireframe.png)  
 
 ## Staff 
 ![image](https://github.com/user-attachments/assets/45f5dc69-6f29-4802-b696-7f8d9ad6ff26)
