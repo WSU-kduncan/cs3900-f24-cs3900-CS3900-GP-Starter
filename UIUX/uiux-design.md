@@ -12,7 +12,7 @@
 ![update page flow](path_to_image)  
 
 ## Delete
-![delete page flow](path_to_image)  
+![delete page flow](images/delete-user-flow.png)  
 
 # Wireframes
 ## Sign in
@@ -22,7 +22,7 @@
 ![pets frame](path_to_image)  
 
 ## Applications 
-![applications frame](path_to_image)  
+![applications frame](images/applications-wireframe.png)  
 
 ## Inventory 
 ![inventory frame](path_to_image)  
