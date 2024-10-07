@@ -9,7 +9,8 @@
 ![create page flow](path_to_image)  
 
 ## Update
-![update page flow](path_to_image)  
+  ![Update User Flow](https://github.com/user-attachments/assets/0d1f1209-551a-4080-8b6b-d62b81b0d547)
+
 
 ## Delete
 ![delete page flow](images/delete-user-flow.png)  
@@ -19,7 +20,8 @@
 ![sign in frame](path_to_image)  
 
 ## Pets 
-![pets frame](path_to_image)  
+  ![Animal Shelter Pets Page](https://github.com/user-attachments/assets/ba0afb01-3497-48b8-bfa9-f07e102ebf2e)
+
 
 ## Applications 
 ![applications frame](images/applications-wireframe.png)  
