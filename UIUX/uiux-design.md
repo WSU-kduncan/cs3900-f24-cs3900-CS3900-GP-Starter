@@ -44,4 +44,5 @@
 ![inventory frame](path_to_image)  
 
 ## Staff 
-![staff frame](path_to_image)  
+![image](https://github.com/user-attachments/assets/45f5dc69-6f29-4802-b696-7f8d9ad6ff26)
+
