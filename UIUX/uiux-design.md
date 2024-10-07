@@ -1,6 +1,7 @@
 # User Flows
 ## Landing/Main application
-![main page flow](./images/home-page-flow.png) 
+![main page flow](./images/home-page-flow.png)
+ 
 **1.) User starts on Log In page.**
 
 **2.) User inputs credentials, Staff ID and password**
@@ -119,7 +120,7 @@
 
 # Wireframes
 ## Sign in
-![sign in frame](path_to_image)  
+![sign in frame](./images/log-in-wireframe.png)  
 
 ## Pets 
   ![Animal Shelter Pets Page](https://github.com/user-attachments/assets/ba0afb01-3497-48b8-bfa9-f07e102ebf2e)
