@@ -21,8 +21,30 @@
 8.) User Selects desired entry and performs whatever it is they needed the info with
 
 
-## Create
-![create page flow](path_to_image)  
+## Create🫡
+
+![image](https://github.com/user-attachments/assets/fe2354af-07a2-4d21-a2a1-e2c29bf32286)
+
+**1:Application opens on the log-in screen.**
+
+**2:User logs in and navigates to the "Create Pet" page.**
+
+**3:User fills in pet details and submits the form.**
+
+**4:Pet is successfully created.**
+
+**5:User moves to the "Create Adopter" section.**
+
+**6:User fills in adopter details and submits the form.**
+
+**7:Adopter is successfully created.**
+
+**8:User navigates to the "Adoption Application" page.**
+
+**9:User selects pet and adopter, sets application status, and submits.**
+
+**10:Adoption application is successfully submitted.**
+
 
 ## Update
   ![Update User Flow](https://github.com/user-attachments/assets/0d1f1209-551a-4080-8b6b-d62b81b0d547)
