@@ -44,6 +44,46 @@
 
 ## Delete
 ![delete page flow](images/delete-user-flow.png)  
+1.) The Application opens on a Log in screen
+
+2.) User Logs in
+
+3.) opens to the pets page as the home page
+
+4.) User selects a tab
+
+5a.) If the user selects staff the user will select a staff member from the list
+
+5b.) User clicks the delete button
+
+5c.) User clicks yes on the confirm Delete pop up
+
+5d.) End of process
+
+6a.) If the user selects Inventory the user will select an item from the list
+
+6b.) User clicks the delete button
+
+6c.) User clicks yes on the confirm Delete pop up
+
+6d.) End of process
+
+7a.) If the user selects Applications the user will select an application from the list
+
+7b.) User clicks the delete button
+
+7c.) User clicks yes on the confirm Delete pop up
+
+7d.) End of process
+
+8a.) If the user selects Pets the user will select a pet from the list
+
+8b.) User clicks the delete button
+
+8c.) User clicks yes on the confirm Delete pop up
+
+8d.) End of process
+
 
 # Wireframes
 ## Sign in
