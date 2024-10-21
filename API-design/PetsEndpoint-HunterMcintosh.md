@@ -1,4 +1,5 @@
 ## GET (used for searching and calling the information based on a given page and filler)
+### GET /api/pets
 ### Searchable parameters:
 - name
 - ID
@@ -11,6 +12,7 @@
 
 
 ## PUT(used for when we wish to update the information on an existing data entry)
+### /api/pets/{petId}
 ### required parameters 
 - petID
 ### changeable parameters
@@ -21,6 +23,7 @@
 
 
 ## POST(used for when we wish to create a new pet)
+### /api/pets
 ### required info
 - name
 - species
@@ -32,6 +35,7 @@
 
 
 ## DELETE(used for when we wish to delete a pets entry from our system)
+### /api/pets/{petId}
 ### required
 - verification that the pet exists in our system
 - a confirmation from user that we wish to delete
