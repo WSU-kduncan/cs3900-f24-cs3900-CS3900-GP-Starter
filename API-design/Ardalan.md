@@ -5,8 +5,11 @@
 **Parameters:**
 
 **name :** Filter by adopter’s name.
+
 **email :** Filter by adopter’s email.
+
 **page (default: 1):** Page number for pagination.
+
 **rpp (default: 10):** Results per page.
 
 **Response:**
@@ -27,7 +30,9 @@ SELECT * FROM Adopter WHERE [filters] LIMIT [rpp] OFFSET [page];
 **Required Data:**
 
 **Name -** The adopter’s full name.
+
 **Email -** Contact email.
+
 **Phone_Number -** Contact phone number.
 
 **Response:**
@@ -48,6 +53,7 @@ INSERT INTO Adopter (Name, Email, Phone_Number) VALUES (name, email, phone) RETU
 **Required Data:**
 
 id  - The adopter’s ID.
+
 JSON body with fields to update: Name, Email, Phone_Number.
 
 **Response:**
