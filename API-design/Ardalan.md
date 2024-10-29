@@ -4,13 +4,13 @@
 
 **Parameters:**
 
-**name :** Filter by adopter’s name.
+name : Filter by adopter’s name.
 
-**email :** Filter by adopter’s email.
+email : Filter by adopter’s email.
 
-**page (default: 1):** Page number for pagination.
+page (default: 1): Page number for pagination.
 
-**rpp (default: 10):** Results per page.
+rpp (default: 10): Results per page.
 
 **Response:**
 
@@ -29,11 +29,11 @@ SELECT * FROM Adopter WHERE [filters] LIMIT [rpp] OFFSET [page];
 
 **Required Data:**
 
-**Name -** The adopter’s full name.
+Name - The adopter’s full name.
 
-**Email -** Contact email.
+Email - Contact email.
 
-**Phone_Number -** Contact phone number.
+Phone_Number - Contact phone number.
 
 **Response:**
 
