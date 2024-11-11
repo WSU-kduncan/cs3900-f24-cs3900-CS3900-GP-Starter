@@ -10,7 +10,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.wsu.workorderproservice.DTO.ServiceResponseDTO;
+import com.wsu.workorderproservice.dto.ServiceResponseDTO;
 import com.wsu.workorderproservice.exception.validation.ValidationError;
 import com.wsu.workorderproservice.exception.validation.ValidationErrorResponse;
 

@@ -15,9 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wsu.workorderproservice.DTO.PetDTO;
-import com.wsu.workorderproservice.DTO.ServiceResponseDTO;
+import com.wsu.workorderproservice.dto.PetDTO;
+import com.wsu.workorderproservice.dto.ServiceResponseDTO;
 import com.wsu.workorderproservice.exception.InvalidRequestException;
+import com.wsu.workorderproservice.service.PetService;
 import com.wsu.workorderproservice.utilities.Constants;
 
 import jakarta.validation.Valid;
@@ -37,7 +38,7 @@ import static com.wsu.workorderproservice.utilities.Constants.RESULT_COUNT;
 
 public class PetController {
 
-    private final PetController PetService;
+    private final PetService petService;
 
 
     @GetMapping
@@ -54,7 +55,7 @@ public class PetController {
                                                 @RequestParam(required = false, defaultValue = "10") Integer rpp,
                                                 @RequestParam(required = false, defaultValue = "dateLastUpdated") String sortField,
                                                 @RequestParam(required = false, defaultValue = Constants.DESC) String sortOrder) {
-                                                    Page<PetDTO> petDTOPage = PetService.get(search, sortField, sortOrder, page, rpp);
+                                                    Page<PetDTO> petDTOPage = petService.get(search, sortField, sortOrder, page, rpp);
     return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "Petss retrieved successfully.", PAGE_COUNT,
             petDTOPage.getTotalPages(), RESULT_COUNT, petDTOPage.getTotalElements())).data(petDTOPage.getContent())
             .build(), HttpStatus.OK);
@@ -79,7 +80,7 @@ public class PetController {
             throw new InvalidRequestException("Pet Id must be provided.");
         }
         return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "Successfully added technician"))
-                .data(PetService.save(petDTO)).build(), HttpStatus.CREATED);
+                .data(petService.save(petDTO)).build(), HttpStatus.CREATED);
     }
 
     //need to add exceptions
@@ -99,7 +100,7 @@ public class PetController {
     @PutMapping("/{petId}")
     public ResponseEntity<ServiceResponseDTO> update(@PathVariable Integer petId, @RequestBody @Valid PetDTO petDTO) {
         return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "Pet updated successfully"))
-                .data(PetService.update(petId, petDTO)).build(), HttpStatus.OK);
+                .data(petService.update(petId, petDTO)).build(), HttpStatus.OK);
     }
 
     

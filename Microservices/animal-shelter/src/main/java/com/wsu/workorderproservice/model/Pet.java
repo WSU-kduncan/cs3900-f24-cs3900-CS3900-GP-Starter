@@ -50,3 +50,5 @@ public class Pet {
 
     @Column(name = "status")
     private String status; //status of pet if adopted or not
+
+}

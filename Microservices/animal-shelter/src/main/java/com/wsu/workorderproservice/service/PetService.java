@@ -6,7 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
-import com.wsu.workorderproservice.DTO.PetDTO;
+import com.wsu.workorderproservice.dto.PetDTO;
 import com.wsu.workorderproservice.exception.DatabaseErrorException;
 import com.wsu.workorderproservice.exception.InvalidRequestException;
 import com.wsu.workorderproservice.model.Pet;

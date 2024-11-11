@@ -1,4 +1,4 @@
-package com.wsu.workorderproservice.DTO;
+package com.wsu.workorderproservice.dto;
 
 
 
