@@ -28,17 +28,17 @@ public class ApplicationController {
     private final ApplicationService applicationService;
 
     @GetMapping(value = "{application_id}")
-    public ResponseEntity<ServiceResponseDTO> getApplication(@PathVariable Integer application_id) {
-        return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "Application retrieved successfully")).data(applicationService.get(application_id)).build(). HttpStatus.OK);
+    public ResponseEntity<ServiceResponseDTO> getApplication(@PathVariable String application_id) {
+        return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "Application retrieved successfully")).data(applicationService.get(application_id)).build(), HttpStatus.OK);
     }
 
     @PostMapping
     public ResponseEntity<ServiceResponseDTO> addApplication(@RequestBody Application application) {
-        return new ResponseEntity<>(ServiceResponseDTO.builder()meta(Map.of(MESSAGE, "Application added successfully")).data(applicationService.add(application)).build(), HttpStatus.CREATED);
+        return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "Application added successfully")).data(applicationService.add(application)).build(), HttpStatus.CREATED);
     }
 
     @PutMapping(value = "{application_id}")
-    public ResponseEntity<ServiceResponseDTO> updateApplication(@PathVariable Integer application_id, @RequestBody Application application) {
+    public ResponseEntity<ServiceResponseDTO> updateApplication(@PathVariable String application_id, @RequestBody Application application) {
         return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "Application updated successfully")).data(applicationService.update(application_id, application)).build(), HttpStatus.OK);
     }
 }

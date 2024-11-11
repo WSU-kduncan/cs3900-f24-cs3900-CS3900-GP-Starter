@@ -8,13 +8,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
-@Builder
-@Table(name = "Pets")
-public class Pet {
+// @Entity
+// @NoArgsConstructor
+// @AllArgsConstructor
+// @Getter
+// @Setter
+// @Builder
+// @Table(name = "Pets")
+// public class Pet {
     
-}
+// }
