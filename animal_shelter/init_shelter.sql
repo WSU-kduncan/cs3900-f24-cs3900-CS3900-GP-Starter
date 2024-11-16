@@ -66,7 +66,7 @@ DROP TABLE IF EXISTS shelter.adoption_application;
 CREATE TABLE adoption_application
 (
 	  -- 
-	 application_id	INT             NOT NULL	AUTO_INCREMENT 	--  'adopter identification number'
+	 application_ID	INT             NOT NULL	AUTO_INCREMENT 	--  'adopter identification number'
 	,pet_ID               	INT     	NOT NULL					--  'Pet ID Number'
 	,adopter_ID           	INT     	NOT NULL					--  'Adopter ID Number'
 	,staff_ID             	INT     	NOT NULL					--  'Staff ID Number'
