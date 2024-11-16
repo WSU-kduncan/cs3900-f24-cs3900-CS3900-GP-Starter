@@ -13,6 +13,9 @@ CREATE TABLE pet
 	,pet_name	VARCHAR(35)     NOT NULL 			COMMENT 'name of the pet'
 	,species        VARCHAR(15)     NOT NULL			COMMENT 'species of the animal'
 	,breed          VARCHAR(25)     NOT NULL 			COMMENT 'Breed of the animal'
+	,sex		VARCHAR(7)	NOT NULL			COMMENT 'Sex of the animal'
+	,weight		DECIMAL(5,2)	NOT NULL			COMMENT 'Weight of the animal'
+	,intake_date	DATE 		NOT NULL			COMMENT 'Date pet joined shelter'
 	,age            SMALLINT        NOT NULL 			COMMENT 'animals age in terms of years'
 	,pet_status     VARCHAR(15)     DEFAULT 'Not Adopted' 		COMMENT 'Animals adoption status' 
 	,CONSTRAINT chk_pet_status CHECK (pet_status in ('Not Adopted', 'Adopted')) 
