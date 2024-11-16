@@ -2,9 +2,8 @@ CREATE DATABASE IF NOT EXISTS shelter;
 
 USE shelter;
 
---Pets
---
-DROP TABLE IF EXISTS shelter.pet;
+-- Pets
+-- DROP TABLE IF EXISTS shelter.pet;
 
 --Create Table
 CREATE TABLE pet
@@ -24,11 +23,10 @@ CREATE TABLE pet
 COMMENT 'Pet'
 ;
 
---Adopters
---
-DROP  TABLE IF EXISTS shelter.adopter;
+-- Adopters
+-- DROP  TABLE IF EXISTS shelter.adopter;
 
---CREATE Table
+-- CREATE Table
 CREATE TABLE adopter
 (
 	 adopter_ID	INT             NOT NULL	AUTO_INCREMENT 	COMMENT 'adopter identification number'
@@ -42,11 +40,10 @@ CREATE TABLE adopter
 COMMENT 'Adopter'
 ;
 
---Staff
---
-DROP  TABLE IF EXISTS shelter.staff;
+-- Staff
+-- DROP  TABLE IF EXISTS shelter.staff;
 
---CREATE Table
+-- CREATE Table
 CREATE TABLE staff
 (
 	 staff_ID       INT		NOT NULL	AUTO_INCREMENT	COMMENT 'Staff ID Number'
@@ -60,11 +57,11 @@ CREATE TABLE staff
 COMMENT 'Staff'
 ;
 
---Adoption Application
+-- Adoption Application
 --
 DROP TABLE IF EXISTS shelter.adoption_application;
 
---CREATE Table
+-- CREATE Table
 -- CREATE Table
 CREATE TABLE adoption_application
 (
@@ -103,28 +100,4 @@ ALTER TABLE adoption_application
 	ON DELETE RESTRICT
 	ON UPDATE RESTRICT;
 
---Inventory
---
-DROP TABLE IF EXISTS shelter.inventory;
-
---Create Table
--- Create Table
-CREATE TABLE inventory
-(
-item_id	INT             NOT NULL	AUTO_INCREMENT 	--  'adopter identification number'
-	,quantity       SMALLINT	 	 			--  'Quantity of Items'
-	,locations      VARCHAR(50) 	 	 			--  'Location of Item'			
-	,cost           DECIMAL(5,2)	 	 			--  'Cost of Item'
-	,expiration     DATE	 	 			--  'Expiration Date of Item'
-	,staff_ID	INT		NOT NULL	 		--  'Staff ID Number'
-	,PRIMARY KEY (item_id)
-)
---  'Inventory'
-;
-
-ALTER TABLE inventory
-	ADD CONSTRAINT	inventory_staff_fk	COMMENT 'constraint for inventory table'
-	FOREIGN KEY     (staff_ID)		COMMENT 'staff_ID foreign key in inventory'
-	REFERENCES      staff (staff_ID)	COMMENT 'reference to staff table primary key'
-	ON DELETE RESTRICT
-	ON UPDATE RESTRICT;			
+		
