@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+  }
+  
+  header.highlighted {
+    border-bottom: 4px solid yellow;
+  }
+  
+  .navbar {
+    display: flex;
+    gap: 15px;
+    background: #333;
+    padding: 0.5em;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 2em;
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
