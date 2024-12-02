@@ -7,6 +7,7 @@ import { AdopterComponent } from './adopter/adopter.component';
 import { StaffComponent } from './staff/staff.component';
 
 export const routes: Routes = [
+    {path: '', component: HomepageComponent},
     {path: 'pet', component: PetComponent },
     {path: 'application', component: ApplicationComponent},
     {path: 'home', component: HomepageComponent},
