@@ -4,12 +4,12 @@ export interface Pet{
     species: string;
     breed: string;
     sex: string;
-    weight: number; //see if you can change to decimal
+    weight: number; 
     intake_date: string;
     age: number;
-    pet_status: string; //need to make this a drop down box to choose from "Adopted or Not Adopted"
+    pet_status: string; 
 
 
-    //email?: string; - ? makes it optional
+    
 
 }

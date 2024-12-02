@@ -1,7 +1,7 @@
 <div class="homepage-container">
   <header [ngClass]="{ highlighted: isHighlighted }">
     <h1>Pet Shelter Pro</h1>
-    <!-- TODO: Add dynamic greetings -->
+   
   </header>
   
   <nav class="navbar">
@@ -15,20 +15,10 @@
   <router-outlet></router-outlet>
 
 
-  <main>
-    <h2>Featured Content</h2>
-    <div *ngIf="featuredItems.length > 0; else noItems">
-      <ul>
-        <li *ngFor="let item of featuredItems">{{ item }}</li>
-      </ul>
-    </div>
-    <ng-template #noItems>
-      <p>No featured items available.</p>
-    </ng-template>
-  </main>
+
 
   <footer>
     <p>&copy; 2024 Your Website</p>
-    <!-- TODO: Add social media icons -->
+    
   </footer>
 </div>

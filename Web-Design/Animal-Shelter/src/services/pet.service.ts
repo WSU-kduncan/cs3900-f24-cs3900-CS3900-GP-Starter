@@ -12,20 +12,20 @@ private pets:Pet[] = [
         species: 'Dog',
         breed: 'Golden Retriever',
         sex: 'Male',
-        weight: 68.5, // in pounds
-        intake_date: '2024-10-15', // YYYY-MM-DD format
-        age: 3, // in years
-        pet_status: 'Not Adopted', // e.g., Available, Adopted, Hold
+        weight: 68.5, 
+        intake_date: '2024-10-15', 
+        age: 3, 
+        pet_status: 'Not Adopted', 
     },
     {  id: 2,
         name: 'Mittens',
         species: 'Cat',
         breed: 'Maine Coon',
         sex: 'Female',
-        weight: 12.3, // in pounds
-        intake_date: '2024-11-01', // YYYY-MM-DD format
-        age: 2, // in years
-        pet_status: 'Adopted', // e.g., Available, Adopted, Hold}
+        weight: 12.3, 
+        intake_date: '2024-11-01', 
+        age: 2, 
+        pet_status: 'Adopted', 
     }
     
 ];

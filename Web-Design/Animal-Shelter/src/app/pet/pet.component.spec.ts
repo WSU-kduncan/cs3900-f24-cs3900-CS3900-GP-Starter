@@ -25,7 +25,7 @@ describe('PetComponent', () => {
 
   it('should have invalid form when empty', () => {
     const form = fixture.nativeElement.querySelector('form');
-    expect(form.checkValidity()).toBeFalsy(); // Checks native form validity
+    expect(form.checkValidity()).toBeFalsy(); 
   });
 
   it('should validate required fields', () => {
@@ -35,7 +35,7 @@ describe('PetComponent', () => {
     const form = fixture.nativeElement.querySelector('form');
     expect(form.checkValidity()).toBeFalsy();
 
-    // Simulate filling out required fields
+    
     component.newPet.id = 1;
     component.newPet.name = 'Buddy';
     component.newPet.species = 'Dog';
@@ -47,7 +47,7 @@ describe('PetComponent', () => {
     component.newPet.pet_status = 'Available';
 
     fixture.detectChanges();
-    expect(form.checkValidity()).toBeTruthy(); // Should now be valid
+    expect(form.checkValidity()).toBeTruthy(); 
   });
 
 

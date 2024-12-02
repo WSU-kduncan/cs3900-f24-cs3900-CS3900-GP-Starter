@@ -1,23 +1,76 @@
-<p>pet works!</p>
-
-<h2> Pet List</h2>
-<ul>
-    <li *ngFor="let pet of pets">
-        {{ pet.name }} - {{ pet.species }}
-        <button (click)="goToPetDetail(pet)">View Details</button>
-    </li>
-</ul>
-
-<h2> Add New Pet </h2>
-<form (submit) = "addPet(newPet)" #petForm="ngForm">
-    <input type="number" name="id" [(ngModel)] = "newPet.id" placeholder="id" required>
-    <input type="text" name="name" [(ngModel)] = "newPet.name" placeholder="name" required>
-    <input type="text" name="species" [(ngModel)] = "newPet.species" placeholder="species" required>
-    <input type="text" name="breed" [(ngModel)] = "newPet.breed" placeholder="breed" required>
-    <input type="text" name="sex" [(ngModel)] = "newPet.sex" placeholder="sex" required>
-    <input type="text" name="weight" [(ngModel)] = "newPet.weight" placeholder="weight" required>
-    <input type="text" name="intake_date" [(ngModel)] = "newPet.intake_date" placeholder="intake_date" required>
-    <input type="number" name="age" [(ngModel)] = "newPet.age" placeholder="age" required>
-    <input type="text" name="pet_status" [(ngModel)] = "newPet.pet_status" placeholder="pet_status" required>
-    <button type="submit" [disabled]="!petForm.form.valid">Add Pet</button>
-</form>
+<div class="pet-container">
+    
+    <div class="header-section">
+      <h1>Manage Pets</h1>
+      <p>
+        Keep track of all pets in the shelter. Add new pets, update their details, and
+        track their adoption status effortlessly.
+      </p>
+    </div>
+  
+   
+    <div class="pet-list-section">
+      <h2>Pet List</h2>
+  
+      <ul *ngIf="pets.length; else noPets">
+        <li *ngFor="let pet of pets" [ngClass]="pet.pet_status.toLowerCase()">
+          <div class="pet-details">
+            <h3>{{ pet.name }}</h3>
+            <p><strong>Species:</strong> {{ pet.species }}</p>
+            <p><strong>Breed:</strong> {{ pet.breed }}</p>
+            <p><strong>Age:</strong> {{ pet.age }} years</p>
+            <p><strong>Status:</strong> <span class="status">{{ pet.pet_status }}</span></p>
+          </div>
+          <div class="action-buttons">
+            <button class="delete-btn" (click)="deletePet(pet.id)">Remove</button>
+          </div>
+        </li>
+      </ul>
+  
+      <ng-template #noPets>
+        <p class="no-pets-message">No pets available. Add a new pet below!</p>
+      </ng-template>
+    </div>
+  
+    
+    <div class="add-pet-section">
+      <h2>Add New Pet</h2>
+      <form (ngSubmit)="addPet()" #petForm="ngForm">
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          [(ngModel)]="newPet.name"
+          required
+        />
+        <input
+          type="text"
+          name="species"
+          placeholder="Species"
+          [(ngModel)]="newPet.species"
+          required
+        />
+        <input
+          type="text"
+          name="breed"
+          placeholder="Breed"
+          [(ngModel)]="newPet.breed"
+          required
+        />
+        <input
+          type="number"
+          name="age"
+          placeholder="Age"
+          [(ngModel)]="newPet.age"
+          required
+        />
+        <select name="status" [(ngModel)]="newPet.pet_status" required>
+          <option value="" disabled>Select Status</option>
+          <option value="Available">Available</option>
+          <option value="Adopted">Adopted</option>
+        </select>
+        <button type="submit" class="add-btn" [disabled]="petForm.invalid">Add Pet</button>
+      </form>
+    </div>
+  </div>
+  
