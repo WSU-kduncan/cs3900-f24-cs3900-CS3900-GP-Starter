@@ -1,7 +1,12 @@
-.container {
+html, body{
+  height: 100%;
+  margin: 0;
+}
+.homepage-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    min-height: 100vh;
 }
 
 header {
@@ -34,23 +39,22 @@ header {
     text-decoration: underline;
   }
   
-  main {
-    padding: 2em;
-    max-width: 800px;
-    text-align: center;
-  }
-  
-  footer {
-    background-color: #333;
-    color: white;
-    width: 100%;
-    text-align: center;
-    padding: 1em 0;
-  }
-
   .navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
-  
+
+.content {
+  flex: 1; /* Take up remaining space, pushing footer to the bottom */
+}
+
+    footer {
+    background-color: #333;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+
+  }

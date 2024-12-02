@@ -1,9 +1,10 @@
+
 <div class="homepage-container">
   <header [ngClass]="{ highlighted: isHighlighted }">
+    
     <h1>Pet Shelter Pro</h1>
-   
   </header>
-  
+    
   <nav class="navbar">
     <a routerLink="/home">Home</a>
     <a routerLink="/application">Application</a>
@@ -12,13 +13,12 @@
     <a routerLink="/staff">Staff</a>
   </nav>
 
-  <router-outlet></router-outlet>
-
-
+  <main>
+    <router-outlet></router-outlet>
+  </main>
 
 
   <footer>
     <p>&copy; 2024 Your Website</p>
-    
   </footer>
 </div>
