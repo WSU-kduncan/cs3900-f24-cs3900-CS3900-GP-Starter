@@ -63,7 +63,7 @@ public class StaffController {
                 .data(staffService.update(id, staffDTO)).build(), HttpStatus.OK);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{code}")
     public ResponseEntity<ServiceResponseDTO> deleteStaff(@PathVariable Integer code) {
         staffService.delete(code);
         return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "staff deleted successfully")).build(), HttpStatus.OK);
