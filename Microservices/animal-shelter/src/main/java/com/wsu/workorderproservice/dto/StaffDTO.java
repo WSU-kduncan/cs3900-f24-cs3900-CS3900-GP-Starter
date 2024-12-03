@@ -22,7 +22,7 @@ import lombok.Setter;
 
 public class StaffDTO {
 
-    private String staffCode;
+    private Integer staffCode;
     @NotBlank(message = "First name must not be null or blank")
     private String firstName;
 

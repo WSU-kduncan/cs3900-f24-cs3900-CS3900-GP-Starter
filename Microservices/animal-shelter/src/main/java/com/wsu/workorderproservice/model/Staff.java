@@ -21,7 +21,7 @@ import lombok.Setter;
 public class Staff {
     @Id
     @Column(name = "staff_id")
-    private String staffCode;
+    private Integer staffCode;
 
     @Column(name = "staff_first_name")
     private String firstName;

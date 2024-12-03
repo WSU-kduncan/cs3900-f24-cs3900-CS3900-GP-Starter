@@ -34,7 +34,7 @@ public class StaffService {
     public Page<StaffDTO> get(String search, String sortField, String sortOrder, Integer page, Integer rpp){
         try {
             Page<Object[]> staff = staffRepository.findBySearch(search, PageRequest.of(page-1, rpp, sort(sortField, sortOrder)));
-            return staff.map(stave -> StaffDTO.builder().staffCode((String)stave[0])
+            return staff.map(stave -> StaffDTO.builder().staffCode((Integer)stave[0])
             .firstName((String)stave[1])
             .lastName((String)stave[2])
             .position((String)stave[3])
@@ -71,7 +71,7 @@ public class StaffService {
      * @param staffDTO - Holds the staff info
      * @return - returns an updated staff entity class
      */
-    public Staff update(String staffCode, StaffDTO staffDTO){
+    public Staff update(Integer staffCode, StaffDTO staffDTO){
         
         if(!staffRepository.existsById(staffCode)){
             throw new InvalidRequestException("Invalid Staff code.");
@@ -91,7 +91,7 @@ public class StaffService {
     /**
      * Will disable and archive staff data for access by management for reference later should it be needed
      */
-    public void delete(String staffCode){
+    public void delete(Integer staffCode){
         if(!staffRepository.existsById(staffCode)){
             throw new InvalidRequestException("Invalid Staff code.");
         }

@@ -6,7 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-public interface StaffRepository extends JpaRepository<Staff, String> {
+public interface StaffRepository extends JpaRepository<Staff, Integer> {
     @Query(nativeQuery = true, value ="some Sql query here")
 
     Page<Object[]> findBySearch(String search, Pageable pageable);

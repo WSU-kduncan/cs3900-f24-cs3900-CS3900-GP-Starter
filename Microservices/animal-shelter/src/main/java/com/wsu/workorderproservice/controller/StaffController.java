@@ -50,7 +50,7 @@ public class StaffController {
 
     @PostMapping //will be used to add new applications to the system
     public ResponseEntity<ServiceResponseDTO> save(@RequestBody @Valid StaffDTO staffDTO){
-        if(!StringUtils.hasLength(staffDTO.getStaffCode())){
+        if(!StringUtils.hasLength(staffDTO.getStaffCode().toString())){
             throw new InvalidRequestException("Staff code must be provided");
         }
         return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "Successfully added staff"))
@@ -58,13 +58,13 @@ public class StaffController {
     }
 
     @PutMapping //Will be used to update the status of and information in applications already existing in the system
-    public ResponseEntity<ServiceResponseDTO> update(@PathVariable String staffCode, @RequestBody @Valid StaffDTO staffDTO) {
+    public ResponseEntity<ServiceResponseDTO> update(@PathVariable Integer staffCode, @RequestBody @Valid StaffDTO staffDTO) {
         return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "staff updated successfully"))
                 .data(staffService.update(staffCode, staffDTO)).build(), HttpStatus.OK);
     }
 
     @DeleteMapping
-    public ResponseEntity<ServiceResponseDTO> deleteStaff(@PathVariable String code) {
+    public ResponseEntity<ServiceResponseDTO> deleteStaff(@PathVariable Integer code) {
         staffService.delete(code);
         return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "staff deleted successfully")).build(), HttpStatus.OK);
     }
