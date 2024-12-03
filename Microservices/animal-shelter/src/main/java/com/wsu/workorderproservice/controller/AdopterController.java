@@ -22,7 +22,7 @@ import static com.wsu.workorderproservice.utilities.Constants.MESSAGE;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping
+@RequestMapping("/adopter")
 public class AdopterController {
     
     private final AdopterService adopterService;
