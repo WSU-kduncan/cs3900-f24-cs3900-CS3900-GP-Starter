@@ -57,10 +57,10 @@ public class StaffController {
         .data(staffService.save(staffDTO)).build(), HttpStatus.CREATED);
     }
 
-    @PutMapping //Will be used to update the status of and information in applications already existing in the system
-    public ResponseEntity<ServiceResponseDTO> update(@PathVariable Integer staffCode, @RequestBody @Valid StaffDTO staffDTO) {
+    @PutMapping("/{id}") //Will be used to update the status of and information in applications already existing in the system
+    public ResponseEntity<ServiceResponseDTO> update(@PathVariable Integer id, @RequestBody @Valid StaffDTO staffDTO) {
         return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "staff updated successfully"))
-                .data(staffService.update(staffCode, staffDTO)).build(), HttpStatus.OK);
+                .data(staffService.update(id, staffDTO)).build(), HttpStatus.OK);
     }
 
     @DeleteMapping
