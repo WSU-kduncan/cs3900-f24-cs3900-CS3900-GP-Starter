@@ -5,6 +5,13 @@
         "name": "WorkOrderProServiceApplication",
         "request": "launch",
         "mainClass": "com.wsu.workorderproservice.WorkOrderProServiceApplication",
+        "projectName": "animal-shelter"
+      },
+      {
+        "type": "java",
+        "name": "WorkOrderProServiceApplication",
+        "request": "launch",
+        "mainClass": "com.wsu.workorderproservice.WorkOrderProServiceApplication",
         "projectName": "microservices-assignment-1",
         "args": "",
         "env": {
