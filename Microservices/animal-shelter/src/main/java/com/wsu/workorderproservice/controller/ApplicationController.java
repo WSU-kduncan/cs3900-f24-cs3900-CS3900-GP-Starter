@@ -22,7 +22,7 @@ import static com.wsu.workorderproservice.utilities.Constants.MESSAGE;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping
+@RequestMapping("/application")
 public class ApplicationController {
     
     private final ApplicationService applicationService;
