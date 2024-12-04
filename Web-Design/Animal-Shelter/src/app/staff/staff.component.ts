@@ -3,11 +3,11 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-staff',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './staff.component.html',
-  styleUrls: ['./staff.component.css'],
+    selector: 'app-staff', 
+    standalone: true,
+    imports: [CommonModule, FormsModule],
+    templateUrl: './staff.component.html',
+    styleUrls: ['./staff.component.css']
 })
 export class StaffComponent implements OnInit {
   staff = [

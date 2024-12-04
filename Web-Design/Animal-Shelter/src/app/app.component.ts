@@ -6,11 +6,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [NgClass, RouterModule, ReactiveFormsModule, CommonModule, FormsModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    standalone: true,
+    imports: [NgClass, RouterModule, ReactiveFormsModule, CommonModule, FormsModule],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'Animal-Shelter';

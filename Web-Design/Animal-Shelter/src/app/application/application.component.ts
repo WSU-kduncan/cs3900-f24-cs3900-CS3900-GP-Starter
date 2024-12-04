@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 @Component({
-  imports: [CommonModule],
-  selector: 'app-application',
-  standalone: true,
-
-  templateUrl: './application.component.html',
-  styleUrl: './application.component.css'
+    imports: [CommonModule],
+    selector: 'app-application',
+    standalone: true,
+    templateUrl: './application.component.html',
+    styleUrl: './application.component.css'
 })
 export class ApplicationComponent {
 

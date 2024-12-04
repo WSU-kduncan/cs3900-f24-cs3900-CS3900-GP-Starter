@@ -3,11 +3,11 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-adopter',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './adopter.component.html',
-  styleUrls: ['./adopter.component.css'],
+    selector: 'app-adopter',
+    standalone: true,
+    imports: [CommonModule, FormsModule],
+    templateUrl: './adopter.component.html',
+    styleUrls: ['./adopter.component.css']
 })
 export class AdopterComponent implements OnInit {
   adopters = [
