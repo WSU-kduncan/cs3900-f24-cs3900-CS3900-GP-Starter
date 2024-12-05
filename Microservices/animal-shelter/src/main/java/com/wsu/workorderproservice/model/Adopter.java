@@ -27,15 +27,14 @@ public class Adopter {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "adopter_id")
+    @Column(name = "adopter_ID")
     private Integer adopterId;
-    @Column(name = "name")
-    private String name;
+    @Column(name = "first_name")
+    private String firstName;
+    @Column(name = "last_name")
+    private String lastName;
     @Column(name = "email")
     private String email;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @Column(name = "registration_date")
-    private Date registrationDate;
-    @Column(name = "phone_number")
+    @Column(name = "phone")
     private String phoneNumber;
 }

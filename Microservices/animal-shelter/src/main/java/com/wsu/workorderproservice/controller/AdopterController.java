@@ -28,7 +28,7 @@ public class AdopterController {
     private final AdopterService adopterService;
 
     @GetMapping(value = "{adopter_id}")
-    public ResponseEntity<ServiceResponseDTO> getAdopter(@PathVariable String adopter_id) {
+    public ResponseEntity<ServiceResponseDTO> getAdopter(@PathVariable Integer adopter_id) {
         return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "Adopter retrieved successfully")).data(adopterService.get(adopter_id)).build(), HttpStatus.OK);
     }
 
@@ -38,7 +38,7 @@ public class AdopterController {
     }
 
     @PutMapping(value = "{adopter_id}")
-    public ResponseEntity<ServiceResponseDTO> updateAdopter(@PathVariable String adopter_id, @RequestBody Adopter adopter) {
+    public ResponseEntity<ServiceResponseDTO> updateAdopter(@PathVariable Integer adopter_id, @RequestBody Adopter adopter) {
         return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "Adopter updated successfully")).data(adopterService.update(adopter_id, adopter)).build(), HttpStatus.OK);
     }
 }
