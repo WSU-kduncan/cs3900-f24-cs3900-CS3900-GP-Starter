@@ -8,7 +8,7 @@
       </p>
     </div>
   
-   
+  
     <div class="pet-list-section">
       <h2>Pet List</h2>
   
@@ -57,8 +57,23 @@
           [(ngModel)]="newPet.breed"
           required
         />
+        <select name="sex" [(ngModel)]="newPet.sex" required>
+          <option value="" disabled>Select Sex</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
         <input
-          type="number"
+        type="number"
+        name="weight"
+        placeholder="weight: 0.0"
+        [(ngModel)]="newPet.weight"/>
+        <input
+        type="date"
+        name="intakeDate"
+        placeholder="intake date yyyy/mm/dd"
+        [(ngModel)]="newPet.intake_date"/>
+        <input
+          type="text"
           name="age"
           placeholder="Age"
           [(ngModel)]="newPet.age"
