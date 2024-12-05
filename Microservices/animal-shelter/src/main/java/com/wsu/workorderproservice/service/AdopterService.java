@@ -23,7 +23,7 @@ public class AdopterService {
     private static final Logger log = LoggerFactory.getLogger(AdopterService.class);
     private final AdopterRepository adopterRepository;
 
-    public Adopter get(String adopter_id) {
+    public Adopter get(Integer adopter_id) {
         Optional<Adopter> adopter = adopterRepository.findById(adopter_id);
         if (adopter.isEmpty()) {
             throw new InvalidRequestException("Invalid adopter ID");
