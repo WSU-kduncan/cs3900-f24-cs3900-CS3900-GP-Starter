@@ -11,11 +11,9 @@ import com.wsu.workorderproservice.model.Pet;
 
 public interface  PetRepository extends JpaRepository<Pet, Integer> {
 
-    @Query("SELECT p.petId, p.petName, p.species, p.breed, p.sex, p.weight, p.age, p.intakeDate, p.status " +
+    @Query("SELECT p.pet_ID AS id, p.pet_name AS name, p.species AS species, p.breed AS breed, p.sex AS sex, p.weight AS weight, p.age AS age, p.intake_date AS date, p.pet_status AS pet_status " +
            "FROM Pet p " +
-           "WHERE (:search IS NULL OR LOWER(p.petName) LIKE LOWER(CONCAT('%', :search, '%')) " +
-           "OR LOWER(p.breed) LIKE LOWER(CONCAT('%', :search, '%')) " +
-           "OR LOWER(p.species) LIKE LOWER(CONCAT('%', :search, '%'))) ")
+           "WHERE :search IS NULL OR (p.pet_name = :search)) ")
     Page<Object[]> findBySearch(String search, PageRequest pageRequest);
     // List<Pet> findByStatus(String status);
     // List<Pet> findByDistinctPetName(String petName);
