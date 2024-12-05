@@ -6,11 +6,11 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-    selector: 'app-pet',
-    standalone: true,
-    imports: [CommonModule, FormsModule],
-    templateUrl: './pet.component.html',
-    styleUrls: ['./pet.component.css']
+  selector: 'app-pet',
+  standalone: true,
+  imports: [CommonModule, FormsModule],
+  templateUrl: './pet.component.html',
+  styleUrls: ['./pet.component.css'],
 })
 export class PetComponent implements OnInit {
   pets: Pet[] = [];
