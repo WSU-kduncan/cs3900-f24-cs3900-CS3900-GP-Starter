@@ -47,7 +47,7 @@ public class AdopterService {
     }
 
     @Transactional(rollbackOn = Exception.class) 
-    public Adopter update(String adopter_id, Adopter adopter) {
+    public Adopter update(Integer adopter_id, Adopter adopter) {
         Optional<Adopter> adopterResp = adopterRepository.findById(adopter_id);
         if (adopterResp.isEmpty()) {
             throw new InvalidRequestException("Invalid adopter ID");

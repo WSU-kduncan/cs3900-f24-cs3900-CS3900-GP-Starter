@@ -22,7 +22,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Builder
-@Table(name = "application")
+@Table(name = "adopter_application")
 public class Application {
     
     @Id
