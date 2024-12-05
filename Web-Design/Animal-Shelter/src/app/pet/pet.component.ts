@@ -21,9 +21,9 @@ export class PetComponent implements OnInit {
     species: '',
     breed: '',
     sex: '',
-    weight: 0,
+    weight: null,
     intake_date: '',
-    age: 0,
+    age: null,
     pet_status: '',
   };
 
@@ -70,9 +70,9 @@ export class PetComponent implements OnInit {
       species: '',
       breed: '',
       sex: '',
-      weight: 0,
+      weight: null,
       intake_date: '',
-      age: 0,
+      age: null,
       pet_status: '',
     };
   }

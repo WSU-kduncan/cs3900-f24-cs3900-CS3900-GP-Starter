@@ -4,9 +4,9 @@ export interface Pet{
     species: string;
     breed: string;
     sex: string;
-    weight: number; 
+    weight: number | null; 
     intake_date: string;
-    age: number;
+    age: number | null;
     pet_status: string; 
 
 
