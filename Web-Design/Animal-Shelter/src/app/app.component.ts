@@ -17,6 +17,18 @@ export class AppComponent {
 
   featuredItems = ['Item 1', 'Item 2', 'Item 3'];
   isHighlighted = true;
+  currentSection = 'home'; 
 
+  setActiveSection(section: string) {
+    this.currentSection = section;
+    this.highlightHeader();
+  }
+
+  highlightHeader() {
+    this.isHighlighted = true;
+    setTimeout(() => {
+      this.isHighlighted = false;
+    }, 300); 
+  }
 
   }

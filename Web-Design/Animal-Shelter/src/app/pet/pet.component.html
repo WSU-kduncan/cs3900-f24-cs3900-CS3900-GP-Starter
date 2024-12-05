@@ -1,5 +1,5 @@
 <div class="pet-container">
-    
+
     <div class="header-section">
       <h1>Manage Pets</h1>
       <p>
@@ -88,5 +88,8 @@
         <button type="submit" class="add-btn" [disabled]="petForm.invalid">Add Pet</button>
       </form>
     </div>
+
+  <app-notification [message]="notificationMessage" [type]="notificationType"></app-notification>
+
   </div>
   

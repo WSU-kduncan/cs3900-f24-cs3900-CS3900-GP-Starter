@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { PetService } from '../../services/pet.service';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NotificationComponent } from '../notification.component'; 
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-pet',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, NotificationComponent],
   templateUrl: './pet.component.html',
   styleUrls: ['./pet.component.css'],
 })
@@ -26,6 +28,8 @@ export class PetComponent implements OnInit {
     age: null,
     pet_status: '',
   };
+  notificationMessage = '';
+  notificationType: 'success' | 'error' = 'success';
 
   constructor(
     private readonly petService: PetService,
@@ -51,6 +55,7 @@ export class PetComponent implements OnInit {
     ) {
       this.newPet.id = this.pets.length + 1; 
       this.petService.addPet({ ...this.newPet }); 
+      this.showNotification('Pet added successfully!', 'success');
       this.loadPets(); 
       this.resetNewPetForm();
     } else {
@@ -59,8 +64,24 @@ export class PetComponent implements OnInit {
   }
 
   deletePet(id: number): void {
-    this.petService.deletePet(id); 
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'You will not be able to recover this record!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'Cancel',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Perform deletion
+        this.petService.deletePet(id); 
     this.loadPets(); 
+        Swal.fire('Deleted!', 'The record has been deleted.', 'success');
+      }
+    });
+    
   }
 
   resetNewPetForm(): void {
@@ -75,5 +96,12 @@ export class PetComponent implements OnInit {
       age: null,
       pet_status: '',
     };
+  }
+  showNotification(message: string, type: 'success' | 'error') {
+    this.notificationMessage = message;
+    this.notificationType = type;
+    setTimeout(() => {
+      this.notificationMessage = ''; 
+    }, 3000);
   }
 }
