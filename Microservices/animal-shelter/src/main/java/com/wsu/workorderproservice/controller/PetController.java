@@ -53,7 +53,7 @@ public class PetController {
     public ResponseEntity<ServiceResponseDTO> getPets(@RequestParam(required = false)String search,
                                                 @RequestParam(required = false, defaultValue = "1") Integer page,
                                                 @RequestParam(required = false, defaultValue = "10") Integer rpp,
-                                                @RequestParam(required = false, defaultValue = "dateLastUpdated") String sortField,
+                                                @RequestParam(required = false, defaultValue = "intakeDate") String sortField,
                                                 @RequestParam(required = false, defaultValue = Constants.DESC) String sortOrder) {
                                                     Page<PetDTO> petDTOPage = petService.get(search, sortField, sortOrder, page, rpp);
     return new ResponseEntity<>(ServiceResponseDTO.builder().meta(Map.of(MESSAGE, "Petss retrieved successfully.", PAGE_COUNT,

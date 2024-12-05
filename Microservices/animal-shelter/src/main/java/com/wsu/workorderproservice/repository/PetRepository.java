@@ -17,7 +17,7 @@ public interface  PetRepository extends JpaRepository<Pet, Integer> {
            "OR LOWER(p.breed) LIKE LOWER(CONCAT('%', :search, '%')) " +
            "OR LOWER(p.species) LIKE LOWER(CONCAT('%', :search, '%'))) ")
     Page<Object[]> findBySearch(String search, PageRequest pageRequest);
-    List<Pet> findByStatus(String status);
-    List<Pet> findByDistinctPetName(String petName);
-    List<Pet> findByDistinctBreed(String breed);
+    // List<Pet> findByStatus(String status);
+    // List<Pet> findByDistinctPetName(String petName);
+    // List<Pet> findByDistinctBreed(String breed);
 }

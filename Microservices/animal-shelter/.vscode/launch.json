@@ -5,7 +5,12 @@
         "name": "WorkOrderProServiceApplication",
         "request": "launch",
         "mainClass": "com.wsu.workorderproservice.WorkOrderProServiceApplication",
-        "projectName": "animal-shelter"
+        "projectName": "animal-shelter",
+        "args": "",
+        "env": {
+          "SERVER_PORT": "8080",
+          "SERVER_CONTEXT_PATH": "/work-order-pro-service"
+        }
       },
       {
         "type": "java",

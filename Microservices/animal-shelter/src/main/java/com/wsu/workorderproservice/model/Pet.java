@@ -48,7 +48,6 @@ public class Pet {
     @Column(name = "intake_date") 
     private Date intakeDate; //date pet joined shelter
 
-    @Column(name = "status")
-    private String status; //status of pet if adopted or not
+    @Column(name = "pet_status")private String status; //status of pet if adopted or not
 
 }
