@@ -53,6 +53,7 @@ getPets(): Pet[] {
 //http post (create/update) - request object, pass pet(what object you are working on) object in after url for microservice
 //property for pets to render if pet is activated or not, ngif
 
+//should change this to be by name
 getPetByID(id: number): Pet | undefined {
     return this.pets.find(pet => pet.id === id)
 }
