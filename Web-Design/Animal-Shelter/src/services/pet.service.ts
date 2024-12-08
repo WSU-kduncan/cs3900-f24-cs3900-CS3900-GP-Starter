@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Pet } from '../model/pet.model';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
 providedIn: 'root'
@@ -29,11 +30,24 @@ private pets:Pet[] = [
     }
     
 ];
-constructor() { }
+constructor(private http: HttpClient) { }
 
+//http call
 getPets(): Pet[] {
     return this.pets;
+    this.http.get("url for microservice").subscribe({
+        next:(res: any) => {
+            this.pets = res.pets
+        }, error(err){
+            console.error(err)
+        }, complete(){
+
+        },
+        })
 }
+
+//http post - request object, pass pet(what object you are working on) object in after url for microservice
+//property for pets to render if pet is activated or not, ngif
 
 getPetByID(id: number): Pet | undefined {
     return this.pets.find(pet => pet.id === id)
