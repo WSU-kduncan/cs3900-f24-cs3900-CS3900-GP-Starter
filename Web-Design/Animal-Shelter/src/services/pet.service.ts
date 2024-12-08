@@ -32,7 +32,10 @@ private pets:Pet[] = [
 ];
 constructor(private http: HttpClient) { }
 
-//http call
+//Haven't tested if this works yet
+
+//http call 
+//idk why its saying this code is unreachable, i need to ask ryan
 getPets(): Pet[] {
     return this.pets;
     this.http.get("url for microservice").subscribe({
@@ -41,12 +44,13 @@ getPets(): Pet[] {
         }, error(err){
             console.error(err)
         }, complete(){
-
+            console.log('List of Pets')
         },
         })
+        
 }
 
-//http post - request object, pass pet(what object you are working on) object in after url for microservice
+//http post (create/update) - request object, pass pet(what object you are working on) object in after url for microservice
 //property for pets to render if pet is activated or not, ngif
 
 getPetByID(id: number): Pet | undefined {
@@ -55,13 +59,40 @@ getPetByID(id: number): Pet | undefined {
 
 addPet(pet: Pet) {
     this.pets.push(pet);
+    this.http.post("url for microservice", pet).subscribe({
+        next:(res: any) => {
+            this.pets = res.pets
+        }, error(err){
+            console.error(err)
+        }, complete(){
+            console.log('Pet added successfully!')
+        },
+        })
 }
 
 updatePet(pet:Pet) {
-    const index = this.pets.findIndex(u => u.id === pet.id)
+    const index = this.pets.findIndex(u => u.id === pet.id);
+    this.http.post("url for microservice", pet).subscribe({
+        next:(res: any) => {
+            this.pets = res.pets
+        }, error(err){
+            console.error(err)
+        }, complete(){
+            console.log('Pet updated successfully!')
+        },
+        })
 }
 
 deletePet (id: number) {
     this.pets = this.pets.filter (pet => pet.id !== id);
+    this.http.delete("url for microservice").subscribe({
+        next:(res: any) => {
+            this.pets = res.pets
+        }, error(err){
+            console.error(err)
+        }, complete(){
+            console.log('Pet deleted successfully!')
+        },
+        })
 }
 }
