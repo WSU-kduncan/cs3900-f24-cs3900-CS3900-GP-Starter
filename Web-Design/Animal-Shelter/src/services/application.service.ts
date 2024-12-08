@@ -22,9 +22,6 @@ export class ApplicationService {
       })      
   }
 
-//http post (create/update) - request object, pass pet(what object you are working on) object in after url for microservice
-//property for pets to render if pet is activated or not, ngif
-
   getApplicationById(applicationId: number): Application | undefined {
     return this.applications.find(application => application.applicationId === applicationId)
   }
