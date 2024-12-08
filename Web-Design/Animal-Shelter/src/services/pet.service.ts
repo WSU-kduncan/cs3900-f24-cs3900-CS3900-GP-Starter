@@ -8,7 +8,7 @@ providedIn: 'root'
 export class PetService {
 
 private pets:Pet[] = [
-    {  id: 1,
+    {  pet_id: 1,
         name: 'Buddy',
         species: 'Dog',
         breed: 'Golden Retriever',
@@ -18,7 +18,7 @@ private pets:Pet[] = [
         age: 3, 
         pet_status: 'Not Adopted', 
     },
-    {  id: 2,
+    {  pet_id: 2,
         name: 'Mittens',
         species: 'Cat',
         breed: 'Maine Coon',
@@ -53,8 +53,9 @@ getPets(): Pet[] {
 //http post (create/update) - request object, pass pet(what object you are working on) object in after url for microservice
 //property for pets to render if pet is activated or not, ngif
 
+//should change this to be by name
 getPetByID(id: number): Pet | undefined {
-    return this.pets.find(pet => pet.id === id)
+    return this.pets.find(pet => pet.pet_id === id)
 }
 
 addPet(pet: Pet) {
@@ -71,7 +72,7 @@ addPet(pet: Pet) {
 }
 
 updatePet(pet:Pet) {
-    const index = this.pets.findIndex(u => u.id === pet.id);
+    const index = this.pets.findIndex(u => u.pet_id === pet.pet_id);
     this.http.post("url for microservice", pet).subscribe({
         next:(res: any) => {
             this.pets = res.pets
@@ -84,7 +85,7 @@ updatePet(pet:Pet) {
 }
 
 deletePet (id: number) {
-    this.pets = this.pets.filter (pet => pet.id !== id);
+    this.pets = this.pets.filter (pet => pet.pet_id !== id);
     this.http.delete("url for microservice").subscribe({
         next:(res: any) => {
             this.pets = res.pets
