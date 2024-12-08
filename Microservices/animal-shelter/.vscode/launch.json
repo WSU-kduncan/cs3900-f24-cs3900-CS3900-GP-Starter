@@ -13,7 +13,7 @@
           "SERVER_CONTEXT_PATH": "/work-order-pro-service",
           "DATABASE_DRIVER":"org.mariadb.jdbc.Driver",
             "DATABASE_PASSWORD":"password",
-          "DATABASE_URL":"jdbc:mariadb://localhost:3306/shelter",
+          "DATABASE_URL":"jdbc:mariadb://host.docker.internal:3306/shelter",
           "DATABASE_USERNAME": "user"
         }
       },
@@ -29,7 +29,7 @@
           "SERVER_CONTEXT_PATH": "/work-order-pro-service",
           "DATABASE_DRIVER":"org.mariadb.jdbc.Driver",
             "DATABASE_PASSWORD":"password",
-          "DATABASE_URL":"jdbc:mariadb://localhost:3306/shelter",
+          "DATABASE_URL": "jdbc:mariadb://host.docker.internal:3306/shelter",
           "DATABASE_USERNAME": "user"
         }
       }

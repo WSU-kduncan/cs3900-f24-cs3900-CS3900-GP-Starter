@@ -3,6 +3,7 @@ package com.wsu.workorderproservice.dto;
 
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -34,14 +35,14 @@ public class PetDTO {
     @NotBlank(message = "Sex must not be null or blank")
     private String sex;
 
-    @NotBlank(message = "Weight must not be null or blank")
+    @NotNull(message = "Weight must not be null or blank")
     private Integer weight;
 
     //if empty field needs default value of "Unkown"
     @Builder.Default
     private String age = "Unknown"; 
 
-    @NotBlank(message = "Date must not be null or blank")
+    @NotNull(message = "Date must not be null or blank")
     private Date intakeDate; //date pet joined shelter
 
     @Builder.Default
