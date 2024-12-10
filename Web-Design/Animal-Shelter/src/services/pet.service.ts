@@ -8,7 +8,7 @@ providedIn: 'root'
 export class PetService {
 
 private pets:Pet[] = [
-    {  id: 1,
+    /*{  id: 1,
         name: 'Buddy',
         species: 'Dog',
         breed: 'Golden Retriever',
@@ -27,7 +27,7 @@ private pets:Pet[] = [
         intake_date: '2024-11-01', 
         age: 2, 
         pet_status: 'Adopted', 
-    }
+    } */
     
 ];
 constructor(private http: HttpClient) { }
@@ -37,8 +37,8 @@ constructor(private http: HttpClient) { }
 //http call 
 //idk why its saying this code is unreachable, i need to ask ryan
 getPets(): Pet[] {
-    return this.pets;
-    this.http.get("url for microservice").subscribe({
+
+    this.http.get("http://localhost:8080/work-order-pro-service/pets").subscribe({
         next:(res: any) => {
             this.pets = res.pets
         }, error(err){
@@ -47,6 +47,7 @@ getPets(): Pet[] {
             console.log('List of Pets')
         },
         })
+        return this.pets;
         
 }
 
@@ -60,7 +61,7 @@ getPetByID(id: number): Pet | undefined {
 
 addPet(pet: Pet) {
     this.pets.push(pet);
-    this.http.post("url for microservice", pet).subscribe({
+    this.http.post("http://localhost:8080/work-order-pro-service/pets", pet).subscribe({
         next:(res: any) => {
             this.pets = res.pets
         }, error(err){

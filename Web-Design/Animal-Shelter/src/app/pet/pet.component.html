@@ -37,6 +37,13 @@
       <h2>Add New Pet</h2>
       <form (ngSubmit)="addPet()" #petForm="ngForm">
         <input
+        type="number"
+        name="id"
+        placeholder="Id"
+        [(ngModel)]="newPet.id"
+        required
+      />
+        <input
           type="text"
           name="name"
           placeholder="Name"

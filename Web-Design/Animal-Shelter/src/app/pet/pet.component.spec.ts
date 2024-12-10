@@ -36,7 +36,7 @@ describe('PetComponent', () => {
     expect(form.checkValidity()).toBeFalsy();
 
     
-    component.newPet.id = 1;
+    /*component.newPet.id = 1;
     component.newPet.name = 'Buddy';
     component.newPet.species = 'Dog';
     component.newPet.breed = 'Golden Retriever';
@@ -44,7 +44,7 @@ describe('PetComponent', () => {
     component.newPet.weight = 30;
     component.newPet.intake_date = '2023-01-01';
     component.newPet.age = 3;
-    component.newPet.pet_status = 'Available';
+    component.newPet.pet_status = 'Available'; */
 
     fixture.detectChanges();
     expect(form.checkValidity()).toBeTruthy(); 

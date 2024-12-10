@@ -26,7 +26,7 @@ export class PetComponent implements OnInit {
     weight: null,
     intake_date: '',
     age: null,
-    pet_status: '',
+    pet_status: '', 
   };
   notificationMessage = '';
   notificationType: 'success' | 'error' = 'success';

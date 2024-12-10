@@ -11,8 +11,8 @@ import { CommonModule } from '@angular/common';
 export class ApplicationComponent {
 
   applications = [
-    { id: 1, name: 'Gani Sagiev', status: 'Pending', date: '2024-12-01' },
-    { id: 2, name: 'Hunter Mcintash', status: 'Pending', date: '2024-11-25' },
+    //{ id: 1, name: 'Gani Sagiev', status: 'Pending', date: '2024-12-01' },
+    //{ id: 2, name: 'Hunter Mcintash', status: 'Pending', date: '2024-11-25' },
     { id: 3, name: 'Ardalan Janpour', status: 'Approved', date: '2024-11-20' },
   ];
 
