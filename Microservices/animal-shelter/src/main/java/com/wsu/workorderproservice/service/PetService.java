@@ -92,7 +92,7 @@ public class PetService {
      */
     public Pet update(Integer petId, PetDTO petDTO) {
         if (!petRepository.existsById(petId)) {
-            throw new InvalidRequestException("Invalid technician code.");
+            throw new InvalidRequestException("Pet already Exists!");
         }
         try {
             Pet pet = mapToEntity(petDTO);
